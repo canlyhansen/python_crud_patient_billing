@@ -1,60 +1,78 @@
-# Python CRUD Application for [Business Domain]
+Python CRUD Application for Patient Billing Management System
 
-A comprehensive Python application for managing [Data Entity] data with Create, Read, Update, and Delete (CRUD) operations.
+A comprehensive Python application for managing patient billing data with Create, Read, Update, and Delete (CRUD) operations.
 
 ## Business Understanding
 
-This project caters to the [Industry/Business Domain] industry, specifically addressing the need to manage [Data Entity] data efficiently. [Data Entity] plays a crucial role in [Explain the importance of data entity in business processes].
+This project caters to the healthcare administration domain, specifically addressing the need to manage patient billing records efficiently in clinics or small hospitals. Patient billing data plays a crucial role in tracking medical expenses, monitoring patient status (In/Out), and supporting financial reporting for daily operations.
 
 **Benefits:**
 
-* Improved data accuracy and consistency
-* Streamlined data management processes
-* Enhanced decision-making through readily available data
-* ... (List additional benefits relevant to the business)
+* Improved billing data accuracy and consistency
+* Streamlined patient record management for cashiers/admin staff
+* Faster retrieval of patient information during service
+* Enhanced decision-making through summary statistics and bill tracking
+* Reduced risk of manual recording errors
 
 **Target Users:**
 
-This application is designed for [Target Users] (e.g., sales representatives, inventory managers, customer support agents) within the organization to facilitate their [Tasks/Activities] related to [Data Entity].
+This application is designed for cashiers or administrative staff in healthcare facilities to facilitate their daily tasks related to managing patient registration numbers, billing amounts, patient status, and basic demographic data.
 
 ## Features
 
 * **Create:**
-    * Add new [Data Entity] entries with essential details like [List relevant fields].
-    * Implement validation rules to ensure data integrity (if applicable, e.g., unique identifiers, data type checks).
+    * Add new patient records with details:
+      1. Registration number
+      2. Name
+      3. Birthdate
+      4. Sex
+      5. Bill
+      6. Status
+    * Input validation ensures:
+      - Unique and numeric registration numbers
+      - Correct birthdate format (YYYY-MM-DD)
+      - Valid bill values and categorical inputs
 * **Read:**
-    * Search and retrieve specific [Data Entity] records by applying filters based on [Searchable fields].
-    * Display comprehensive information for each [Data Entity] in a user-friendly format.
-    * Integrate pagination and sorting capabilities for large datasets (if applicable).
+    * View all patient records in a formatted table
+    * Search patient by:
+      - Registration number (exact match)
+      - Name keyword (case-insensitive)
+    * Sorting feature to display patients by highest bill
 * **Update:**
-    * Modify existing [Data Entity] data to reflect changes in [Attributes/Properties].
-    * Provide clear confirmation or error messages based on update success or failure.
+    * Update patient information based on registration number
+    * Editable fields:
+      1. Registration Number
+      2. Name
+      3. Birthdate
+      4. Sex
+      5. Status
+    * Flexible bill update options:
+      1. Add to existing bill
+      2. Replace bill with new value
+    * Confirmation step before saving changes
 * **Delete:**
-    * Allow for the removal of unwanted [Data Entity] records with appropriate authorization checks (if applicable).
-    * Implement soft delete functionality to prevent permanent data loss (optional, depending on business needs).
-    * Consider offering data archiving capabilities (optional).
+    * Remove one or multiple patients using registration numbers
+    * Supports batch deletion using comma-separated input (e.g., 001,002,003)
+    * Confirmation prompt before deletion to prevent accidental removal
 * **Security:**
-    * Implement user authentication and authorization mechanisms (if sensitive data is involved) to control access to different CRUD operations.
-    * ... (Specify additional security features as needed)
+    * Simple login authentication for a single cashier user
+    * Ensures only authorized staff can access and modify patient billing data
 * **Reporting:**
-    * Generate reports or summaries based on [Data Entity] data to support [Business Functions] (optional).
-    * Export data in various formats (e.g., CSV, Excel) for further analysis (optional).
+    * Display summary statistics:
+      1. Total number of patients
+      2. Total accumulated bills
+    * View patients sorted by highest billing amount for quick financial insights
 
 ## Installation
 
 1. **Prerequisites:**
-    * Python version (specify the required version)
-    * Additional dependencies (list any required packages)
+    * Python 3.10 or higher
+    * No external libraries required (pure Python standard library)
 
 2. **Installation:**
     ```bash
-    git clone https://github.com/<your-username>/<your-repo-name>.git
-    cd <your-repo-name>
-    pip install -r requirements.txt  # If using a requirements.txt file
-    ```
-
-3. **Database Setup (if applicable):**
-    Follow specific instructions for configuring your database connection, aligning with the business's chosen database management system.
+    git clone https://github.com/canlyhansen/python_crud_patient_billing.git
+    cd python_crud_patient_billing
 
 ## Usage
 
@@ -63,18 +81,26 @@ This application is designed for [Target Users] (e.g., sales representatives, in
     python main.py
     ```
 
-2. **CRUD Operations:**
-    * **Create:** Add a new [Data Entity] record, for example, a new customer in a customer management system, providing details like name, contact information, and preferences.
-    * **Read:** Search and retrieve customer information by name, ID, or other relevant criteria.
-    * **Update:** Modify customer details, such as updating their address or contact details.
-    * **Delete:** Remove a customer record from the system (with appropriate authorization, if applicable).
+2. **Login**
+   Use the cashier credentials (as defined in the program) to access the system.
+   
+3. **CRUD Operations:**
+    * **Create:** Add a new patient record with validated inputs.
+    * **Read:** Display all patients or search by registration number or name.
+    * **Update:** Modify patient information and billing details with confirmation.
+    * **Delete:** Remove one or multiple patient records safely with confirmation prompts.
 
 ## Data Model
-This project utilizes a [Data Structure] (e.g., relational database, JSON documents) to represent [Data Entity] data. The following fields are typically stored:
-   * [Field 1]: (Data type) - Description of the field's purpose in the business context.
-   * [Field 2]: (Data type) - Description of the field's purpose in the business context.
-   * ... (List all relevant fields)
+This project utilizes a Python list of dictionaries to represent patient billing data. Each patient record contains the following fields:
+   * Registration Number: (string) – Unique numeric identifier for each patient
+   * Name: (string) – Patient’s full name
+   * Birthdate: (string) – Date of birth in YYYY-MM-DD format
+   * Sex: (string) – Gender of the patient (M/F)
+   * Bill: (integer) – Total billing amount for the patient
+   * Status: (string) – Patient status (In/Out) indicating admission state
 
 ## Contributing
 We welcome contributions to this project! Please feel free to open a pull request, sent to [your_email] or submit an issue if you encounter any problems or have suggestions for improvements.
+
+Contact: canlyhansen@gmail.com
 
