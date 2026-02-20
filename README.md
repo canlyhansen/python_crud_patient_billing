@@ -100,7 +100,5 @@ This project utilizes a Python list of dictionaries to represent patient billing
    * Status: (string) – Patient status (In/Out) indicating admission state
 
 ## Contributing
-We welcome contributions to this project! Please feel free to open a pull request, sent to [your_email] or submit an issue if you encounter any problems or have suggestions for improvements.
-
-Contact: canlyhansen@gmail.com
+We welcome contributions to this project! Please feel free to open a pull request, send it to canlyhansen@gmail.com or submit an issue if you encounter any problems or have suggestions for improvements.
 
