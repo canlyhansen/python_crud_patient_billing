@@ -1,4 +1,4 @@
-Python CRUD Application for Patient Billing Management System
+# Python CRUD Application for Patient Billing Management System
 
 A comprehensive Python application for managing patient billing data with Create, Read, Update, and Delete (CRUD) operations.
 
@@ -100,5 +100,5 @@ This project utilizes a Python list of dictionaries to represent patient billing
    * Status: (string) – Patient status (In/Out) indicating admission state
 
 ## Contributing
-We welcome contributions to this project! Please feel free to open a pull request, send it to canlyhansen@gmail.com or submit an issue if you encounter any problems or have suggestions for improvements.
+I welcome contributions to this project! Please feel free to open a pull request, send it to canlyhansen@gmail.com or submit an issue if you encounter any problems or have suggestions for improvements.
 
